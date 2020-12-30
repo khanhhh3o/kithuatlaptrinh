@@ -1,18 +1,22 @@
 import java.util.Scanner;
-
 public class bai2 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
         int n = sc.nextInt();
-        int arr[] = new int[n];
-        for(int i=0;i<n;i++){
-            System.out.println("Phần tử thứ: " + i );
-            arr[i]=sc.nextInt();
-        }
-        for(int i=0;i<n;i++){
-            if(arr[i] % 2 == 0){
-                System.out.println("Các giá trị là số chẵn: " + arr[i]);
+        int[][] arr = new int[n][m];
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < m; j++){
+                arr[i][j] = sc.nextInt();
             }
         }
+        int answer = 0;
+        for (int i = 0;i < n; i++){
+            for (int j = 0;j < m;j++){
+                answer += arr[i][j];
+
+            }
+        }
+        System.out.print(answer);
     }
 }
