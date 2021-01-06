@@ -1,22 +1,17 @@
 import java.util.Scanner;
+
 public class bai2 {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
-        int n = sc.nextInt();
-        int[][] arr = new int[n][m];
-        for (int i = 0; i < n; i++){
-            for (int j = 0; j < m; j++){
-                arr[i][j] = sc.nextInt();
-            }
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        if (a >= b && a >= c){
+            System.out.println(a);
+        }else if (b>=c){
+            System.out.println(b);
+        }else {
+            System.out.println(c);
         }
-        int answer = 0;
-        for (int i = 0;i < n; i++){
-            for (int j = 0;j < m;j++){
-                answer += arr[i][j];
-
-            }
-        }
-        System.out.print(answer);
     }
 }
