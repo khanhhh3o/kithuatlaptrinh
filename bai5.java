@@ -1,26 +1,24 @@
-
-
 import java.util.Scanner;
 
 public class bai5 {
-    boolean KTSNT(int n){
-        for(int i =2; i<=Math.sqrt(n);i++){
-            if(n%i == 0){
-                return false;
+    public static int n;
+    public static double giaithua(int n){
+        double tmp=1;
+        if (n>1) {
+            for (int i = 2; i <= n; i++) {
+                tmp *= i;
             }
         }
-        return true;
+        return tmp;
     }
-    public static void main(String args[]){
-        Scanner s = new Scanner(System.in);
-        System.out.print("Nhập số cần kiểm tra: ");
-        int n = s.nextInt();
-        bai5 snt = new bai5();
-        if(snt.KTSNT(n)){
-            System.out.print("Số: " +n +" là số nguyên tố.");
-        }else{
-            System.out.print("Số: " +n +" không phải là số nguyên tố.");
+    public static void main(String[] args) {
+        float tong = 0.0f;
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Nhập số tự nhiên N = ");
+        n = reader.nextInt();
+        for (int i = 1; i <= n; i++) {
+            tong+= i/giaithua(i);
         }
+        System.out.println("tong day so la: " + tong);
     }
 }
-
